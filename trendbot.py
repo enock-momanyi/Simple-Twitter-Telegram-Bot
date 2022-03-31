@@ -9,7 +9,7 @@ from app import *
 
 from tokensec import *
 
-PORT = int(os.environ.get('PORT',5000))
+PORT = int(os.environ.get('PORT',88))
 
 manual = '/trends - get latest trends on your set location.\n'
 '/location <city/country> - set location eg. (/location Kenya)\n'
