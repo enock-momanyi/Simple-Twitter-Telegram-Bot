@@ -94,7 +94,7 @@ def main():
     dispatcher.add_handler(CommandHandler("unset", unset))
 
     # Start the Bot
-    updater.start_webhook(listen="0.0.0.0", port=int(PORT),url_path=TELEGRAM_TOKEN)
+    updater.start_webhook(listen="0.0.0.0", port=80,url_path=TELEGRAM_TOKEN)
     updater.bot.set_webhook('https://ttrendbot.herouapp.com/' + TELEGRAM_TOKEN)
 
     # Block until you press Ctrl-C or the process receives SIGINT, SIGTERM or
