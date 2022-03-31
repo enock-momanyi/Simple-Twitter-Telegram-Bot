@@ -9,7 +9,7 @@ from app import *
 
 from tokensec import *
 
-PORT = int(os.environ.get('PORT',88))
+PORT = int(os.environ.get('PORT',5000))
 
 manual = '/trends - get latest trends on your set location.\n'
 '/location <city/country> - set location eg. (/location Kenya)\n'
@@ -94,8 +94,7 @@ def main():
     dispatcher.add_handler(CommandHandler("unset", unset))
 
     # Start the Bot
-    updater.start_webhook(listen="0.0.0.0", port=80,url_path=TELEGRAM_TOKEN)
-    updater.bot.set_webhook('https://ttrendbot.herouapp.com/' + TELEGRAM_TOKEN)
+    updater.start_webhook(listen="0.0.0.0", port=int(PORT),url_path=TELEGRAM_TOKEN,webhook_url='https://ttrendbot.herouapp.com/' + TELEGRAM_TOKEN)
 
     # Block until you press Ctrl-C or the process receives SIGINT, SIGTERM or
     # SIGABRT. This should be used most of the time, since start_polling() is
