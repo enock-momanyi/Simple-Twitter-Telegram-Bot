@@ -1,6 +1,6 @@
 import tweepy
 from db import get_woeid
-from .token import *
+from .tokensec import *
 
 auth = tweepy.OAuth1UserHandler(
     API_KEY, API_SECRET_KEY, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
