@@ -7,7 +7,7 @@ from telegram.ext import Updater, CommandHandler, CallbackContext
 from db import insert, update_location, user_info
 from app import *
 
-from .tokensec import *
+from tokensec import *
 
 PORT = int(os.environ.get('PORT',5000))
 
